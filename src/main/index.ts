@@ -17,7 +17,7 @@ function createWindow() {
     mainWindow.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`);
   } else {
     // and load the index.html of the app.
-    mainWindow.loadFile(path.join(__dirname, '../index.html'));
+    mainWindow.loadFile(path.join(__dirname, 'index.html'));
   }
 
   // Emitted when the window is closed.
