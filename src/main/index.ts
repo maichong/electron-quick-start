@@ -9,8 +9,11 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 400,
     width: 400,
+    title: '郑州脉冲软件科技有限公司',
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
-
 
   if (isDevelopment) {
     mainWindow.webContents.openDevTools();
