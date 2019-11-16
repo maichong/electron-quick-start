@@ -1,8 +1,6 @@
-import { takeLatest } from 'redux-saga/effects';
+import { takeLatest, all } from 'redux-saga/effects';
 import { STARTUP, startupSaga } from './startup';
 
 export default function* root() {
-  yield [
-    takeLatest(STARTUP, startupSaga),
-  ];
+  yield all([takeLatest(STARTUP, startupSaga)]);
 }
